@@ -31,6 +31,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'majutsushi/tagbar'
+Plugin 'MattesGroeger/vim-bookmarks'
 call vundle#end()            " required
 "filetype plugin indent on    " required
 "NERDTree ON 단축키를 "\nt"로 설정
@@ -97,6 +98,8 @@ augroup markdown
 augroup END
 
 let g:Tlist_Ctags_Cmd = '/usr/local/bin/ctags'
-nmap <F3> :TagbarToggle<CR>
-nmap <F4> :NERDTreeToggle<CR>
+nmap <F3> :NERDTreeToggle<CR>
+nmap <F4> :TagbarToggle<CR>
+
+source ~/.cscope_maps.vim
 
