@@ -25,6 +25,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 " All of your Plugins must be added before the following line
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'scrooloose/nerdtree'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/syntastic'
@@ -102,4 +103,19 @@ nmap <F3> :NERDTreeToggle<CR>
 nmap <F4> :TagbarToggle<CR>
 
 source ~/.cscope_maps.vim
+
+"FuzzFinder
+set rtp+=/home/djkim/.vim/bundle/fzf.vim
+nnoremap <C-p> :Files<Cr>
+
+"airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_theme="wombat"
+let g:airline_powerline_fonts = 1
+nnoremap <C-S-t> :enew<Enter>         " 새로운 버퍼를 연다
+nnoremap <F5> :bprevious!<Enter>    " 이전 버퍼로 이동
+nnoremap <F6> :bnext!<Enter>        " 다음 버퍼로 이동
+nnoremap <C-F4> :bp <BAR> bd #<Enter> " 현재 버퍼를 닫고 이전 버퍼로 이동
+
 
