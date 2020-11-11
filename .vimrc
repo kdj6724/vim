@@ -33,6 +33,10 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'MattesGroeger/vim-bookmarks'
+
+Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plugin 'junegunn/fzf.vim'
+
 call vundle#end()            " required
 "filetype plugin indent on    " required
 "NERDTree ON 단축키를 "\nt"로 설정
@@ -117,5 +121,8 @@ nnoremap <C-S-t> :enew<Enter>         " 새로운 버퍼를 연다
 nnoremap <F5> :bprevious!<Enter>    " 이전 버퍼로 이동
 nnoremap <F6> :bnext!<Enter>        " 다음 버퍼로 이동
 nnoremap <C-F4> :bp <BAR> bd #<Enter> " 현재 버퍼를 닫고 이전 버퍼로 이동
+
+map <C-f> <Esc><Esc>:Files!<CR>
+map <C-g> <Esc><Esc>:CCnmits!<CR>
 
 
