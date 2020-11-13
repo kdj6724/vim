@@ -117,12 +117,16 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_theme="wombat"
 let g:airline_powerline_fonts = 1
-nnoremap <C-S-t> :enew<Enter>         " 새로운 버퍼를 연다
+"nnoremap <C-S-t> :enew<Enter>         " 새로운 버퍼를 연다
 nnoremap <F5> :bprevious!<Enter>    " 이전 버퍼로 이동
 nnoremap <F6> :bnext!<Enter>        " 다음 버퍼로 이동
 nnoremap <C-F4> :bp <BAR> bd #<Enter> " 현재 버퍼를 닫고 이전 버퍼로 이동
 
-map <C-f> <Esc><Esc>:Files!<CR>
-map <C-g> <Esc><Esc>:CCnmits!<CR>
+map <F2> <Esc><Esc>:Files!<CR>
+map <C-c> <Esc><Esc>:Commits!<CR>
+
+"bookmark
+highlight BookmarkSign ctermbg=NONE ctermfg=160
+highlight BookmarkLine ctermbg=194 ctermfg=NONE
 
 
